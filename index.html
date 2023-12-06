@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut  icon" href="icone-facture.png" />
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="dist/fonts/glyphicons-halflings-regular.eot" />
+
+    <script src="dist/js/JQuery3.7.0.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+    <script src="dist/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <title>Facture</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div id="filariane" class="col-xs-12">
+          <ol class="breadcrumb">
+            <li>
+              <span
+                class="glyphicon glyphicon-home"
+                style="color: rgb(60, 188, 213); font-size: 20px"
+              ></span>
+            </li>
+            <li>Facturisation</li>
+            <li class="active">Achat</li>
+          </ol>
+        </div>
+        <!-- filariane -->
+        <div id="achat" class="col-xs-12 col-sm-8 col-lg-6">
+          <div class="table-responsive">
+            <table class="table table-bordered ">
+              <tr>
+                <td><label for="">Nom Produit : </label></td>
+                <td><input type="text" name="nomProd" id="nomProd" /></td>
+              </tr>
+              <tr>
+                <td><label for="">Prix Unitaire: </label></td>
+                <td><input type="number" min="100" name="" id="prixUnit" /></td>
+              </tr>
+              <tr>
+                <td><label for="">Quantités : </label></td>
+                <td>
+                  <input type="number" min="1" name="" id="nbr" />
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div id="boutons1" class="pull-right">
+            <button id="ajouter" class="btn btn-success">
+              <span class="glyphicon glyphicon-shopping-cart"></span> Ajouter
+            </button>
+            <!-- <button id="modifier" class="btn btn-warning "> <span class="glyphicon glyphicon-minus"></span> Modifier</button> -->
+            <button id="supprimer" class="btn btn-danger">
+              <span class="glyphicon glyphicon-remove"></span> Supprimer
+            </button>
+          </div>
+          <!--fin boutons -->
+        </div>
+        <!--#achat -->
+      </div>
+      <div class="row">
+        <div id="tableau" class="col-xs-12 col-sm-8 col-lg-6">
+          <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>Nom produit</th>
+                  <th>Prix unitaire</th>
+                  <th>Quantités</th>
+                  <th>Annulation</th>
+                </tr>
+              </thead>
+              <tbody id="remplir"></tbody>
+            </table>
+          </div>
+          <button id="valider" class="btn btn-success pull-right">
+            <span class="glyphicon glyphicon-ok-sign"> </span> Valider
+          </button>
+        </div>
+        <!--tableau -->
+      </div>
+      <!-- row2 -->
+      <div class="row">
+        <div id="payemment" class="col-xs-12 col-sm-6 col-lg-6 pull-right">
+          <div class="table-responsive">
+            <table class="table table-condensed table-hover">
+              <tr>
+                <td>Net :</td>
+                <td id="net"></td>
+              </tr>
+              <tr>
+                <td>TVA :</td>
+                <td id="TVA"></td>
+              </tr>
+              <tr>
+                <td>Somme à payer :</td>
+                <td id="somme"></td>
+              </tr>
+              <tr>
+                <td><input type="number" name="" id="money" min="100" /></td>
+                <td>
+                  <input
+                    type="submit"
+                    class="btn btn-danger btn-sm"
+                    id="Apayer"
+                    value="payer"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>Money :</td>
+                <td id="largent"></td>
+              </tr>
+              <tr>
+                <td>A rendre :</td>
+                <td id="rendre"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <!--#payemment -->
+      </div>
+      <!-- row3-->
+    </div>
+    <!-- .container -->
+  </body>
+</html>
